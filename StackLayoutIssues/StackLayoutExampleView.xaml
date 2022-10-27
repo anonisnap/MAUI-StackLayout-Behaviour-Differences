@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StackLayoutIssues.StackLayoutExampleView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="StackLayoutExampleView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--#region Informative Labels-->
+        <Label
+            Grid.Row="0"
+            HorizontalOptions="CenterAndExpand"
+            Text="Basic StackLayout (Orientation Vertical) [HorizontalOptions]" />
+
+        <Label
+            Grid.Row="2"
+            HorizontalOptions="CenterAndExpand"
+            Text="Basic StackLayout (Orientation Horizontal) [HorizontalOptions]" />
+        <!--#endregion Informative Labels-->
+
+        <!--  StackLayout [Vertical]  -->
+        <StackLayout Grid.Row="1" Orientation="Vertical">
+            <Label VerticalOptions="StartAndExpand" Text="A Short Text" />
+            <Label VerticalOptions="EndAndExpand" Text="A Much Longer Text To Fill Space" />
+        </StackLayout>
+
+        <!--  StackLayout [Horizontal]  -->
+        <StackLayout Grid.Row="3" Orientation="Horizontal">
+            <Label HorizontalOptions="StartAndExpand" Text="A Short Text" />
+            <Label HorizontalOptions="EndAndExpand" Text="A Much Longer Text To Fill Space" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
